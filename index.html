@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janani S - Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('profile-section')">Home</a></li>
+                <li><a href="#" onclick="showSection('internships-section')">Internships</a></li>
+                <li><a href="#" onclick="showSection('projects-section')">Projects</a></li>
+                <li><a href="#" onclick="showSection('education-section')">Education & Certifications</a></li>
+                <li><a href="#" onclick="showSection('contact-section')">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <section id="profile-section" class="profile-section">
+        <div class="profile-picture">
+            <img src="pic.jpeg" alt="Profile Picture">
+        </div>
+        <h1>Janani S</h1>
+        <p>Since I am pursuring my third year in B.Tech Artificial Intelligence and Data Science at KPRIET , Coimbatore</p>
+
+        <div id="contact" class="contact-container">
+            <h2>Contact Me</h2>
+            <div class="contact-icons">
+                <a href="mailto:jananisri1736@gmail.com" class="icon">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+                <a href="tel:+919876543210" class="icon">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Phone</span>
+                </a>
+                <a href="https://www.linkedin.com/in/janani-s-707409257/" target="_blank" class="icon">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://www.hackerrank.com/profile/jananisri1736" target="_blank" class="icon">
+                    <i class="fab fa-hackerrank"></i>
+                    <span>HackerRank</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="internships-section" class="hidden-sectionhidden-section left-aligned">
+        <h2>Internships</h2>
+        
+        <ul>
+            <h3><strong>Python Django - Internships</strong></h3>
+            <p>Successfully completed a 4-week internship at Pinesphere Solutions, gaining hands-on experience in the Django framework and PostgreSQL database. Developed a Customer Relationship Management (CRM) system as a project, showcasing proficiency in Django and contributing to real-world business solutions.</p>
+        </ul>
+        <br>
+        <br>
+
+        <div class="internship-images">
+            <img src="internship1.jpg" alt="Internship 1">
+            <img src="internship2.jpg" alt="Internship 2">
+            <img src="internship3.jpg" alt="Internship 3">
+            <img src="internship4.jpg" alt="Internship 4">
+        </div>
+    </section>
+
+    <section id="projects-section" class="hidden-section">
+        <h2>Projects</h2>
+        <ul>
+            <h3>School Dropout Analysis</h3>
+            <div class="project-images">
+                <img src="project5.jpg" alt="Project 5">
+                
+            </div>
+            <h3>Farmer’s Companion</h3>
+            <div class="project-images">
+                <img src="project1.jpg" alt="Project 1">
+                <img src="project2.jpg" alt="Project 2">
+                <img src="project3.jpg" alt="Project 3">
+                <img src="project4.jpg" alt="Project 4">
+            </div>
+        </ul>
+    </section>
+
+    <section id="education-section" class="hidden-section left-aligned">
+        <h2>Education</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Degree</th>
+                    <th>Degree Name</th>
+                    <th>Completed Year</th>
+                    <th>Percentage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bachelor of Technology</td>
+                    <td>Artificial Intelligence and Data Science</td>
+                    <td>2022-2026</td>
+                    <td>8.54 CGPA</td>
+                </tr>
+                <tr>
+                    <td>HSLC</td>
+                    <td>Computer Science</td>
+                    <td>2022</td>
+                    <td>94.3%</td>
+                </tr>
+                <tr>
+                    <td>SSLC</td>
+                    <td>-</td>
+                    <td>2020</td>
+                    <td>82%</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Certifications</h2>
+        <ul>
+            <li>Data Analytics with Python - NPTEL</li>
+            <li>Supervised Machine Learning: Regression and Classification - Coursera</li>
+            <li>Front-End Development in HTML - Great Learning</li>
+            <li>Front-End Development in CSS - Great Learning</li>
+
+        </ul>
+    </section>
+
+    <section id="contact-section" class="hidden-section">
+        <h2>Contact Me</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="reason">Reason for Contact:</label>
+                <textarea id="reason" name="reason" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </section>
+    
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+        // Show profile section by default
+        showSection('profile-section');
+    </script>
+</body>
+</html>
